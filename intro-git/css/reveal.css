@@ -223,6 +223,7 @@ body {
 
 .reveal .controls .navigate-left {
   top: 42px;
+  right: 75px;
   border-right-width: 22px;
   border-right-color: #000; }
 
