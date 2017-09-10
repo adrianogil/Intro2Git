@@ -102,6 +102,22 @@
 				<section name="setup" data-background-color="#348fd4">
 					<a ></a>
 				    <div class="scrollblock block-setup">
+				        <h2>Versionamento e seus benefícios</h2>
+				        <p>
+				        	<ul>
+				                <li class="fragment">Backups</li>
+				                <li class="fragment">Reprodutibilidade</li>
+				                <li class="fragment">Ramificação de projeto</li>
+				                <li class="fragment">Comparar diferentes versões do mesmo arquivo </li>
+				                <li class="fragment">Marcação e resgate de versões estáveis</li>
+				            </ul>
+				        </p>
+			        </div>
+				</section>
+
+				<section name="setup" data-background-color="#348fd4">
+					<a ></a>
+				    <div class="scrollblock block-setup">
 				        <h2>Sistemas de Controle de Vers&atilde;o</h2>
 				        <p> Sistema que registra as mudanças feitas em um arquivo ou um conjunto de arquivos ao longo do tempo permitindo que você possa recuperar <b>versões específicas.</b> </p>
 			        </div>
@@ -140,10 +156,10 @@
 				        <h2>Objetivos do Git</h2>
 				        <p>
 				        	<ul>
-				                <li>Velocidade</li>
-				                <li>Suporte para desenvolvimento não-linear (em milhares de branches paralelos)</li>
-				                <li>Completamente distribuido</li>
-				                <li>Capacidade de lidar eficientemente com grandes projetos como o Linux</li>
+				                <li class="fragment">Velocidade</li>
+				                <li class="fragment">Completamente distribuido</li>
+				                <li class="fragment">Suporte para desenvolvimento não-linear (em milhares de branches paralelos)</li>
+				                <li class="fragment">Capacidade de lidar eficientemente com grandes projetos como o Linux</li>
 				            </ul>
 				        </p>
 			        </div>
@@ -273,36 +289,81 @@
 				    </div>
 				</section>
 
-				<section data-background-color="#000">
-					<a name="branching"></a>
-				    <div class="scrollblock block-branching">
-				        <h2>ramificando</h2>
+				<section data-background-color="#ffc19f">
+					<a name="status"></a>
+				    <div class="scrollblock block-remote">
+				        <h2>verificando suas altera&ccedil;&otilde;es antes do commit</h2>
 				        <p>
-				            <i>Branches</i> ("ramos") s&atilde;o utilizados para desenvolver funcionalidades isoladas umas das outras. O branch <i>master</i> &eacute; o branch "padr&atilde;o" quando voc&ecirc; cria um reposit&oacute;rio. Use outros branches para desenvolver e mescle-os (<i>merge</i>) ao branch master ap&oacute;s a conclus&atilde;o.
+				        	Para listar quais arquivos estão marcados para commit, use <br/>
+				        	<code>git status</code><br/>
+				            Os arquivos/diretórios que nunca foram adicionados em um commit são exibidos como <b>Untracked files</b>
 				        </p>
-				        <img src="img/branches.png" alt="" />
 				    </div>
 				</section>
 
-				<section data-background-color="#000">
-					<a name="branching"></a>
-				    <div class="scrollblock block-branching">
-				        <h2>ramificando</h2>
+				<section data-background-color="#ffc19f">
+					<a name="status"></a>
+				    <div class="scrollblock block-remote">
+				        <h2>Arquivos ignorados</h2>
 				        <p>
-				            crie um novo branch chamado "funcionalidade_x" e selecione-o usando<br />
-				            <code>git checkout -b funcionalidade_x</code><br />
+				        	Em determinados projetos, a lista de arquivos que nunca serão commitados pode ser longa. Nesses casos é melhor adicionar o <i>path</i> destes arquivos em um
+				        	<code>.gitignore</code><br/>
+			        	</p>
+				        <p class="fragment">
+				            Todos os arquivos identificados são removidos da listagem do <code>git status</code> e para ser adicionados no projeto deve ser usado o <code>git add -f <ignored-file></code><br/>
+				        </p>
+				    </div>
+				</section>
+
+				<section data-background-color="#ffc19f">
+					<a name="status"></a>
+				    <div class="scrollblock block-remote">
+				        <h2>verificando os commits</h2>
+				        <p>
+				        	<code>git whatchanged</code><br/>
+				            Se voc&ecirc; n&atilde;o clonou um reposit&oacute;rio existente e quer conectar seu reposit&oacute;rio a um servidor remoto, voc&ecirc; deve adicion&aacute;-lo com<br />
+				            <code>git remote add origin &lt;servidor&gt;</code><br />
+				            Agora voc&ecirc; &eacute; capaz de enviar suas altera&ccedil;&otilde;es para o servidor remoto selecionado.<br />
+				        </p>
+				    </div>
+				</section>
+
+				<section data-background-color="#ffc19f">
+					<a name="status"></a>
+				    <div class="scrollblock block-remote">
+				        <h2>verificando suas altera&ccedil;&otilde;es antes do commit</h2>
+				        <p>
+				        	<code>git log</code><br/>
+				        	<code>git log --pretty=oneline</code><br/>
+				        	<code>git log --since=2.weeks</code><br/>
+				        	Existem outros filtros como <code>–since</code>, <code>--after</code>, <code>--until</code>, <code>--before</code>, <code>--author </code>
+				            Se voc&ecirc; n&atilde;o clonou um reposit&oacute;rio existente e quer conectar seu reposit&oacute;rio a um servidor remoto, voc&ecirc; deve adicion&aacute;-lo com<br />
+				            <code>git remote add origin &lt;servidor&gt;</code><br />
+				            Agora voc&ecirc; &eacute; capaz de enviar suas altera&ccedil;&otilde;es para o servidor remoto selecionado.<br />
+				        </p>
+				    </div>
+				</section>
+
+				<section data-background-color="#348fd4">
+					<a name="tagging"></a>
+				    <div class="scrollblock block-tagging">
+				        <h2>rotulando</h2>
+				        <p>
+				            &eacute; recomendado criar r&oacute;tulos para releases de software. Este &eacute; um conhecido conceito, que tamb&eacute;m existe no SVN.
 			            </p>
 			            <p class="fragment">
-				            retorne para o master usando<br />
-				            <code>git checkout master</code><br />
+				            Voc&ecirc; pode criar um novo r&oacute;tulo chamado <i>1.0.0</i> executando o comando<br />
+				            <code>git tag 1.0.0 1b2e1d63ff</code><br />
 			            </p>
 			            <p class="fragment">
-				            e remova o branch da seguinte forma<br />
-				            <code>git branch -d funcionalidade_x</code><br />
+				            o <i>1b2e1d63ff</i> representa os 10 primeiros caracteres do id de commit que voc&ecirc; quer referenciar com seu r&oacute;tulo.
 			            </p>
 			            <p class="fragment">
-				            um branch <i> n&atilde;o est&aacute; dispon&iacute;vel a outros</i> a menos que voc&ecirc; envie o branch para seu reposit&oacute;rio remoto<br />
-				            <code>git push origin &lt;funcionalidade_x&gt;</code>
+				            Voc&ecirc; pode obter o id de commit com <br />
+				            <code>git log</code><br />
+			            </p>
+			            <p class="fragment">
+				            voc&ecirc; pode tamb&eacute;m usar menos caracteres do id de commit, ele somente precisa ser &uacute;nico.
 				        </p>
 				    </div>
 				</section>
@@ -345,30 +406,6 @@
 				    </div>
 				</section>
 
-				<section data-background-color="#348fd4">
-					<a name="tagging"></a>
-				    <div class="scrollblock block-tagging">
-				        <h2>rotulando</h2>
-				        <p>
-				            &eacute; recomendado criar r&oacute;tulos para releases de software. Este &eacute; um conhecido conceito, que tamb&eacute;m existe no SVN.
-			            </p>
-			            <p class="fragment">
-				            Voc&ecirc; pode criar um novo r&oacute;tulo chamado <i>1.0.0</i> executando o comando<br />
-				            <code>git tag 1.0.0 1b2e1d63ff</code><br />
-			            </p>
-			            <p class="fragment">
-				            o <i>1b2e1d63ff</i> representa os 10 primeiros caracteres do id de commit que voc&ecirc; quer referenciar com seu r&oacute;tulo.
-			            </p>
-			            <p class="fragment">
-				            Voc&ecirc; pode obter o id de commit com <br />
-				            <code>git log</code><br />
-			            </p>
-			            <p class="fragment">
-				            voc&ecirc; pode tamb&eacute;m usar menos caracteres do id de commit, ele somente precisa ser &uacute;nico.
-				        </p>
-				    </div>
-				</section>
-
 				<section data-background-color="#fff8c9">
 					<a name="checkout-replace"></a>
 				    <div class="scrollblock block-checkout-replace">
@@ -391,6 +428,40 @@
 				            Se ao inv&eacute;s disso voc&ecirc; deseja remover todas as altera&ccedil;&otilde;es e commits locais, recupere o hist&oacute;rico mais recente do servidor e aponte para seu branch master local desta forma<br />
 				            <code>git fetch origin</code><br />
 				            <code>git reset --hard origin/master</code>
+				        </p>
+				    </div>
+				</section>
+
+				<section data-background-color="#000">
+					<a name="branching"></a>
+				    <div class="scrollblock block-branching">
+				        <h2>ramificando</h2>
+				        <p>
+				            <i>Branches</i> ("ramos") s&atilde;o utilizados para desenvolver funcionalidades isoladas umas das outras. O branch <i>master</i> &eacute; o branch "padr&atilde;o" quando voc&ecirc; cria um reposit&oacute;rio. Use outros branches para desenvolver e mescle-os (<i>merge</i>) ao branch master ap&oacute;s a conclus&atilde;o.
+				        </p>
+				        <img class="plain" src="img/branches.png" alt="" />
+				    </div>
+				</section>
+
+				<section data-background-color="#000">
+					<a name="branching"></a>
+				    <div class="scrollblock block-branching">
+				        <h2>ramificando</h2>
+				        <p>
+				            crie um novo branch chamado "funcionalidade_x" e selecione-o usando<br />
+				            <code>git checkout -b funcionalidade_x</code><br />
+			            </p>
+			            <p class="fragment">
+				            retorne para o master usando<br />
+				            <code>git checkout master</code><br />
+			            </p>
+			            <p class="fragment">
+				            e remova o branch da seguinte forma<br />
+				            <code>git branch -d funcionalidade_x</code><br />
+			            </p>
+			            <p class="fragment">
+				            um branch <i> n&atilde;o est&aacute; dispon&iacute;vel a outros</i> a menos que voc&ecirc; envie o branch para seu reposit&oacute;rio remoto<br />
+				            <code>git push origin &lt;funcionalidade_x&gt;</code>
 				        </p>
 				    </div>
 				</section>
