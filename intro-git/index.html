@@ -74,7 +74,6 @@
 				            <a href="index.zh.html">中文</a>,
 				            <a href="index.ko.html">한국어</a>
 				            <br />
-				            por favor informe problemas em <a href="https://github.com/rogerdudler/git-guide/issues">github</a>
 				        </p>
 					</div>
 				</section>
@@ -87,7 +86,7 @@
 					<a ></a>
 				    <div class="scrollblock block-setup">
 				        <h2>Arquivos e suas vers&otilde;es</h2>
-				        <img src="img/final-final-comics.jpg" alt="" style="width: 40%" />
+				        <img class="fragment" src="img/final-final-comics.jpg" alt="" style="width: 40%" />
 			        </div>
 				</section>
 
@@ -279,7 +278,7 @@
 
 				<section data-background-color="#ffc19f">
 					<a name="push"></a>
-				    <div class="scrollblock block-remote">
+				    <div >
 				        <h2>enviando altera&ccedil;&otilde;es</h2>
 				        <p>
 				            Se voc&ecirc; n&atilde;o clonou um reposit&oacute;rio existente e quer conectar seu reposit&oacute;rio a um servidor remoto, voc&ecirc; deve adicion&aacute;-lo com<br />
@@ -289,10 +288,10 @@
 				    </div>
 				</section>
 
-				<section data-background-color="#ffc19f">
+				<section data-background-color="#cb815a">
 					<a name="status"></a>
-				    <div class="scrollblock block-remote">
-				        <h2>verificando suas altera&ccedil;&otilde;es antes do commit</h2>
+				    <div >
+				        <h2>antes do commit</h2>
 				        <p>
 				        	Para listar quais arquivos estão marcados para commit, use <br/>
 				        	<code>git status</code><br/>
@@ -301,45 +300,40 @@
 				    </div>
 				</section>
 
-				<section data-background-color="#ffc19f">
+				<section data-background-color="#8c4621">
 					<a name="status"></a>
-				    <div class="scrollblock block-remote">
+				    <div>
 				        <h2>Arquivos ignorados</h2>
 				        <p>
-				        	Em determinados projetos, a lista de arquivos que nunca serão commitados pode ser longa. Nesses casos é melhor adicionar o <i>path</i> destes arquivos em um
+				        	A lista de arquivos que nunca serão commitados pode ser longa, nesses casos é melhor adicionar o <i>path</i> destes arquivos em um
 				        	<code>.gitignore</code><br/>
 			        	</p>
 				        <p class="fragment">
-				            Todos os arquivos identificados são removidos da listagem do <code>git status</code> e para ser adicionados no projeto deve ser usado o <code>git add -f <ignored-file></code><br/>
+				            Então todos os arquivos identificados são removidos da listagem do <code>git status</code> e para ser adicionados no projeto deve ser usado o <code>git add -f <ignored-file></code><br/>
 				        </p>
 				    </div>
 				</section>
 
 				<section data-background-color="#ffc19f">
 					<a name="status"></a>
-				    <div class="scrollblock block-remote">
+				    <div>
 				        <h2>verificando os commits</h2>
 				        <p>
-				        	<code>git whatchanged</code><br/>
-				            Se voc&ecirc; n&atilde;o clonou um reposit&oacute;rio existente e quer conectar seu reposit&oacute;rio a um servidor remoto, voc&ecirc; deve adicion&aacute;-lo com<br />
-				            <code>git remote add origin &lt;servidor&gt;</code><br />
-				            Agora voc&ecirc; &eacute; capaz de enviar suas altera&ccedil;&otilde;es para o servidor remoto selecionado.<br />
-				        </p>
-				    </div>
-				</section>
-
-				<section data-background-color="#ffc19f">
-					<a name="status"></a>
-				    <div class="scrollblock block-remote">
-				        <h2>verificando suas altera&ccedil;&otilde;es antes do commit</h2>
-				        <p>
-				        	<code>git log</code><br/>
+				        	O histórico de mudanças pode ser visualizado através do <code>git log</code>
+			        	</p>
+			        	<p class="fragment">
+				        	Para uma lista mais comprimida dos commits:<br/>
 				        	<code>git log --pretty=oneline</code><br/>
-				        	<code>git log --since=2.weeks</code><br/>
+			        	</p>
+				        <p class="fragment">	
+				        	Ou para a filtrar a lista somente com os commits das últimas duas semanas: <code>git log --since=2.weeks</code><br/>
+			        	</p>
+			        	<p class="fragment">
 				        	Existem outros filtros como <code>–since</code>, <code>--after</code>, <code>--until</code>, <code>--before</code>, <code>--author </code>
-				            Se voc&ecirc; n&atilde;o clonou um reposit&oacute;rio existente e quer conectar seu reposit&oacute;rio a um servidor remoto, voc&ecirc; deve adicion&aacute;-lo com<br />
-				            <code>git remote add origin &lt;servidor&gt;</code><br />
-				            Agora voc&ecirc; &eacute; capaz de enviar suas altera&ccedil;&otilde;es para o servidor remoto selecionado.<br />
+			        	</p>
+			        	<p class="fragment">
+				            Já para uma lista dos arquivos alterados em cada commit, use 
+				         	<code>git whatchanged</code><br/>
 				        </p>
 				    </div>
 				</section>
